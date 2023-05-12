@@ -1,0 +1,33 @@
+mat-toolbar {
+    background-color: rgba(61, 59, 59, 0.6);
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0 30px;
+}
+
+.header-container {
+    position: relative;
+    height: 35%;
+
+}
+
+.header-toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
