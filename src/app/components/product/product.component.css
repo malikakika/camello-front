@@ -1,0 +1,65 @@
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    display: flex;
+    /* Utiliser Flexbox pour centrer le contenu */
+    align-items: center;
+    /* Centrer verticalement */
+    justify-content: center;
+    /* Centrer horizontalement */
+    border: none;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.description {
+    text-align: center;
+}
+
+
+
+.content {
+    display: flex;
+    align-items: top;
+    justify-content: top;
+}
+
+.btn-rect {
+    width: 85px;
+    height: 50px;
+    background-color: #D9D9D9;
+    display: flex;
+    /* Utiliser Flexbox pour centrer le contenu */
+    align-items: center;
+    /* Centrer verticalement */
+    justify-content: center;
+    /* Centrer horizontalement */
+    border: none;
+
+    margin-right: auto;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.price {
+    color: #FF6D60;
+    margin-left: 10%;
+}
+
+mat-card {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #FF6D60;
+    width: 383px;
+    height: auto;
+}

@@ -6,8 +6,6 @@ mat-toolbar {
     padding: 0%;
 }
 
-
-
 mat-form-field {
     width: 50rem;
     height: 5rem;
@@ -20,11 +18,8 @@ mat-form-field {
     margin-right: 10%;
 }
 
-
-
 .menu {
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
 }
@@ -36,7 +31,7 @@ mat-form-field {
     font-size: 1em;
     font-family: 'Poppins';
     border-right: 2px solid black;
-    /* Autres propriétés CSS */
+
 
 }
 
@@ -44,9 +39,6 @@ mat-form-field {
     padding: 0 30px;
 }
 
-.spacer {
-    flex-grow: 1;
-}
 
 a:hover {
     font-weight: bold;

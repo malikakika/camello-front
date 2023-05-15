@@ -10,7 +10,7 @@ mat-toolbar {
 .menu a {
     color: white;
     text-decoration: none;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .header-container {
@@ -28,6 +28,6 @@ mat-toolbar {
 
 .header-container img {
     width: 100%;
-    height: 100%;
+    height: 10rem;
     object-fit: cover;
 }
