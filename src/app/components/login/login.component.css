@@ -1,0 +1,17 @@
+button {
+    background-color: #FF6D60;
+    border: none;
+    color: #F7D060;
+
+}
+
+
+label {
+    text-align: cebnter;
+}
+
+.submit {
+    padding: 3%;
+    font-size: 1em;
+    font-weight: bold;
+}

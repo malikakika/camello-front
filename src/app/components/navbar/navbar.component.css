@@ -6,6 +6,12 @@ mat-toolbar {
     padding: 0%;
 }
 
+.custom-form-field {
+    margin-top: 20px;
+}
+
+
+
 mat-form-field {
     width: 50rem;
     height: 5rem;
