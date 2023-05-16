@@ -4,14 +4,15 @@
         <a class="logo" routerLink="/Home">
             <img src="assets/picture/CM.svg" width="100%" alt="" loading="lazy" />
         </a>
-        <mat-form-field>
+        <mat-form-field class="custom-form-field">
             <mat-icon>search</mat-icon>
-            <input matInput placeholder="Recherche">
+            <input matInput class="custom-input" placeholder="Recherche">
         </mat-form-field>
         <div class="menu">
             <a routerLink="/Favorites">Favorites <img src="assets/picture/heart.svg"></a>
 
-            <a routerLink="/Login">Login</a>
+            <a data-bs-toggle="modal" data-bs-target="#myModal">Login</a>
+
         </div>
 
         <div class="buy">

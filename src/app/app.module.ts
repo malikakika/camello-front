@@ -8,6 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,9 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductComponent } from './components/product/product.component';
+import { LoginComponent } from './components/login/login.component';
+import { PersonalizedPageComponent } from './pages/personalized-page/personalized-page.component';
+import { RequestPageComponent } from './pages/request-page/request-page.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,9 @@ import { ProductComponent } from './components/product/product.component';
     FooterComponent,
     HomeComponent,
     ProductComponent,
+    LoginComponent,
+    PersonalizedPageComponent,
+    RequestPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,10 @@ import { ProductComponent } from './components/product/product.component';
     MatIconModule,
     MatButtonModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
