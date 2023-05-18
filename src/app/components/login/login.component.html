@@ -3,65 +3,158 @@
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">LOGIN</h4>
+                <h4 class="modal-title">{{ isRegistering ? 'REGISTER' : 'LOGIN' }}</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
+                <ng-container *ngIf="!isRegistering; else registerFormContent">
+                    <!-- Formulaire de connexion -->
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
 
-                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="email-container">
+                            <div class="row ">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <label>Username or email*</label>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6">
 
-                    <div class="email-container">
-                        <div class="row ">
-                            <div class="col-sm-6 col-md-6 col-lg-6">
-                                <label>Username or email*</label>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6">
-
-                                <mat-form-field class="email">
-                                    <mat-label>Email</mat-label>
-                                    <input type="email" matInput [formControl]="emailFormControl" required>
-                                    <mat-error *ngIf="emailFormControl.invalid && emailFormControl.touched">Email is
-                                        required</mat-error>
-                                </mat-form-field>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="password-container">
-                        <div class="row ">
-                            <div class="col-sm-6 col-md-6 col-lg-6">
-                                <label>Password *</label>
-                            </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6">
-
-                                <mat-form-field class="email">
-                                    <mat-label>Password</mat-label>
-                                    <input type="password" matInput [formControl]="passwordFormControl" required>
-                                    <mat-error
-                                        *ngIf="passwordFormControl.invalid && passwordFormControl.touched">Password
-                                        is
-                                        required</mat-error>
-                                </mat-form-field>
+                                    <mat-form-field class="email">
+                                        <mat-label>Email</mat-label>
+                                        <input type="email" matInput [formControl]="emailFormControl" required>
+                                        <mat-error *ngIf="emailFormControl.invalid && emailFormControl.touched">Email is
+                                            required</mat-error>
+                                    </mat-form-field>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="password-container">
+                            <div class="row ">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <label>Password *</label>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+
+                                    <mat-form-field class="email">
+                                        <mat-label>Password</mat-label>
+                                        <input type="password" matInput [formControl]="passwordFormControl" required>
+                                        <mat-error
+                                            *ngIf="passwordFormControl.invalid && passwordFormControl.touched">Password
+                                            is
+                                            required</mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
 
 
 
-                    <div class="error-message" *ngIf="errorMessage">
-                        {{ errorMessage }}
-                    </div>
+                        <div class="error-message" *ngIf="errorMessage">
+                            {{ errorMessage }}
+                        </div>
 
-                </form>
+                    </form>
+                </ng-container>
+
+                <ng-template #registerFormContent>
+                    <!-- Formulaire d'inscription -->
+                    <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+
+                        <div class="FirstName-container">
+                            <div class="row ">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <label>First Name </label>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+
+                                    <mat-form-field class="email">
+                                        <mat-label>Name</mat-label>
+                                        <input type="email" matInput [formControl]="firstnameFormControl" required>
+                                        <mat-error
+                                            *ngIf="firstnameFormControl.invalid && firstnameFormControl.touched">Email
+                                            is
+                                            required</mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="LastName-container">
+                            <div class="row ">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <label>Last Name </label>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+
+                                    <mat-form-field class="email">
+                                        <mat-label> Last Name</mat-label>
+                                        <input type="email" matInput [formControl]="lastnameFormControl" required>
+                                        <mat-error
+                                            *ngIf="lastnameFormControl.invalid && lastnameFormControl.touched">Email
+                                            is
+                                            required</mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="email-container">
+                            <div class="row ">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <label>Email </label>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+
+                                    <mat-form-field class="email">
+                                        <mat-label>Email</mat-label>
+                                        <input type="email" matInput [formControl]="emailFormControl" required>
+                                        <mat-error *ngIf="emailFormControl.invalid && emailFormControl.touched">Email is
+                                            required</mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="password-container">
+                            <div class="row ">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <label>Password *</label>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+
+                                    <mat-form-field class="email">
+                                        <mat-label>Password</mat-label>
+                                        <input type="password" matInput [formControl]="passwordFormControl" required>
+                                        <mat-error
+                                            *ngIf="passwordFormControl.invalid && passwordFormControl.touched">Password
+                                            is
+                                            required</mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="error-message" *ngIf="errorMessage">
+                            {{ errorMessage }}
+                        </div>
+
+                    </form>
+                </ng-template>
             </div>
 
             <!-- Modal footer -->
+
             <div class="modal-footer">
                 <a routerLink="/reset" routerLinkActive="active">Forgot your password?</a>
-                <button class="submit" type="submit" [disabled]="loginForm.invalid">IDENTIFICATION</button>
-
+                <button class="submit" type="submit"
+                    [disabled]="isRegistering ? registerForm.invalid : loginForm.invalid">
+                    {{ isRegistering ? 'REGISTER' : 'LOGIN' }}
+                </button>
+                <a class="button" (click)="isRegistering = !isRegistering" *ngIf="!isRegistering">REGISTER</a>
+                <a class="button" (click)="isRegistering = !isRegistering" *ngIf="isRegistering">BACK TO LOGIN</a>
             </div>
+
         </div>
     </div>
 </div>

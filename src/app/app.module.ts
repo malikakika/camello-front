@@ -10,7 +10,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -22,6 +22,8 @@ import { ProductComponent } from './components/product/product.component';
 import { LoginComponent } from './components/login/login.component';
 import { PersonalizedPageComponent } from './pages/personalized-page/personalized-page.component';
 import { RequestPageComponent } from './pages/request-page/request-page.component';
+import { StoreComponent } from './pages/store/store.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { RequestPageComponent } from './pages/request-page/request-page.componen
     LoginComponent,
     PersonalizedPageComponent,
     RequestPageComponent,
+    StoreComponent,
+    SideNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,9 @@ import { RequestPageComponent } from './pages/request-page/request-page.componen
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

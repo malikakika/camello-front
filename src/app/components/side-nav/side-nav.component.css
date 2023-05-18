@@ -1,0 +1,25 @@
+.side-nav {
+    width: 15rem;
+    background-color: white;
+    margin: 2rem;
+
+}
+
+.side-nav a {
+    display: block;
+    margin-bottom: 3rem;
+    text-decoration: none;
+    color: black;
+
+}
+
+.side-nav a:hover {
+    font-weight: bold;
+}
+
+.side-nav a {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #FF6D60;
+
+}

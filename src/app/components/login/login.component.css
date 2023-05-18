@@ -1,8 +1,11 @@
-button {
+.button {
     background-color: #FF6D60;
     border: none;
     color: #F7D060;
-
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 1em;
+    padding: 0.5em;
 }
 
 
@@ -11,7 +14,10 @@ label {
 }
 
 .submit {
-    padding: 3%;
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: 1em;
+    padding: 0.5em;
+    background-color: #FF6D60;
+    border: none;
+    color: #F7D060;
 }

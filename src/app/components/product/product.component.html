@@ -1,22 +1,40 @@
-<mat-card>
-    <mat-card-header>
-        <button class="btn-rect"> -20%</button>
-        <button class="btn-circle"> <img src="assets/picture/heart.svg"></button>
-    </mat-card-header>
-    <mat-card-content>
-        <div class="content">
-            <img src="assets/picture/product.png">
+<div class="product-container">
+
+
+
+    <button class="control" (click)="precedent()" [disabled]="indexCourant === 0"> <img
+            src="assets/picture/back.svg"></button>
+
+    <div class="cartes-container">
+
+
+        <div class="carte" *ngFor="let carte of cartes.slice(indexCourant, indexCourant+3); let i=index">
+            <mat-card>
+                <mat-card-header>
+                    <button class="btn-rect">-20%</button>
+                    <button class="btn-circle">
+                        <img src="assets/picture/heart.svg" />
+                    </button>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="content">
+                        <img src="{{ carte.imageSrc }}" />
+                    </div>
+                    <div class="description">
+                        <h1>{{ carte.productName }}</h1>
+                        <img src="assets/picture/star.png">
+
+                        <div class="product-price">
+                            <h2 class="strike">{{ carte.previousPrice }}</h2>
+                            <h2 class="price">{{ carte.currentPrice }}</h2>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
         </div>
-        <div class="description">
-            <h1>Moroccan Wool Plate</h1>
-            <img src="assets/picture/star.png">
-            <div class="product-price">
-                <h2 class="strike">13.9$</h2>
-                <h2 class="price">10.9$</h2>
-            </div>
+    </div>
 
-        </div>
+    <button class="control" (click)="suivant()" [disabled]="indexCourant + 3 >= cartes.length"> <img
+            src="assets/picture/next.svg"></button>
 
-
-    </mat-card-content>
-</mat-card>
+</div>

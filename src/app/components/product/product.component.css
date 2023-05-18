@@ -60,6 +60,31 @@ mat-card {
     border-right: 1px solid;
     border-bottom: 1px solid;
     border-color: #FF6D60;
-    width: 383px;
-    height: auto;
+    width: 23rem;
+    height: 30rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.cartes-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-container {
+
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.control {
+
+
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
 }

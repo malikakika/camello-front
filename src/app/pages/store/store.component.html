@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="store-container">
+    <div class="row">
+        <div class="col-md-3">
+            <app-side-nav></app-side-nav>
+        </div>
+        <div class="col-md-9">
+
+            <div class="cartes-container">
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let carte of cartes; let i = index;">
+                        <mat-card>
+                            <mat-card-content>
+                                <div class="content">
+                                    <img src="{{ carte.imageSrc }}" />
+                                </div>
+                                <div class="description">
+                                    <h1>{{ carte.productName }}</h1>
+                                    <div class="product-price">
+                                        <h2 class="price">{{ carte.currentPrice }}</h2>
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
