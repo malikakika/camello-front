@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Add</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let article of articles">
+            <td>{{ article.id }}</td>
+            <td>{{ article.idproduct }}</td>
+            <td>
+                <button (click)="addArticle(article.id)">Add</button>
+            </td>
+
+            <td>
+                <button (click)="deleteArticle(article.id)">Delete</button>
+            </td>
+
+
+
+        </tr>
+    </tbody>
+</table>
