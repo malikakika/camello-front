@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { AuthentificationService } from 'src/app/services/authentification/authentification.service';
+import { AuthenticationService } from 'src/app/services/authentification/authentification.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authentificationService: AuthentificationService,
+    private authenticationService: AuthenticationService,
     private router: Router
   ) { }
 
@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
     const email = this.emailFormControl.value;
     const password = this.passwordFormControl.value;
 
-    this.authentificationService.login(email, password).subscribe(
+    this.authenticationService.login(email, password).subscribe(
       (response) => {
         console.log(response);
         // Rediriger l'utilisateur vers la page d'accueil
@@ -88,7 +88,7 @@ export class LoginComponent implements OnInit {
     const password = this.passwordFormControl.value;
 
     // Appeler le service d'inscription avec les données du formulaire
-    this.authentificationService.register(firstName, lastName, email, password).subscribe(
+    this.authenticationService.register(firstName, lastName, email, password).subscribe(
       (response) => {
         console.log(response);
         // Rediriger l'utilisateur vers la page de connexion après l'inscription réussie
