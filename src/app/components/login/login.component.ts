@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
     const email = this.emailFormControl.value;
     const password = this.passwordFormControl.value;
 
-    this.authentificationService.login(email).subscribe(
+    this.authentificationService.login(email, password).subscribe(
       (response) => {
         console.log(response);
         // Rediriger l'utilisateur vers la page d'accueil

@@ -24,6 +24,12 @@ import { PersonalizedPageComponent } from './pages/personalized-page/personalize
 import { RequestPageComponent } from './pages/request-page/request-page.component';
 import { StoreComponent } from './pages/store/store.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { AdminSideNavComponent } from './Admin/components/admin-side-nav/admin-side-nav.component';
+import { AdminUsersComponent } from './Admin/components/admin-users/admin-users.component';
+import { AdminArticlesComponent } from './Admin/components/admin-products/admin-articles.component';
+import { AdminOrdersComponent } from './Admin/components/admin-orders/admin-orders.component';
+import { AdminPageComponent } from './Admin/pages/admin-page/admin-page.component';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +44,12 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     RequestPageComponent,
     StoreComponent,
     SideNavComponent,
+    AdminSideNavComponent,
+    AdminUsersComponent,
+    AdminArticlesComponent,
+    AdminOrdersComponent,
+    AdminPageComponent
+
   ],
   imports: [
     BrowserModule,
@@ -53,6 +65,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+
 
     HttpClientModule
   ],

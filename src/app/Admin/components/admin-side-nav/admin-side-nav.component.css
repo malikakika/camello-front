@@ -1,0 +1,21 @@
+.side-nav {
+    width: 15rem;
+    background-color: white;
+    margin: 2rem;
+
+}
+
+.side-nav a {
+    display: block;
+    margin-bottom: 3rem;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-bottom: 3px solid #66968E;
+
+
+}
+
+.side-nav a:hover {
+    font-weight: bold;
+}

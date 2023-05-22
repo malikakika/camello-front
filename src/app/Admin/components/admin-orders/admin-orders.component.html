@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ID-Product</th>
+            <th>Date</th>
+            <th>UserName</th>
+            <th>Adress</th>
+            <th>Payement</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orders">
+            <td>{{ order.id }}</td>
+            <td>{{ order.idproduct }}</td>
+            <td>{{ order.date }}</td>
+            <td>{{ order.username}}</td>
+            <td>{{ order.adress }}</td>
+            <td>{{ order.paiement }}</td>
+
+
+            <td>
+                <button (click)="deleteOrder(order.id)">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

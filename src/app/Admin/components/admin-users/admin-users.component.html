@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Rôle</th>
+            <th>Delete</th> <!-- Nouvelle colonne pour le bouton de suppression -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+                <button (click)="deleteUser(user.id)">Delete</button> <!-- Bouton de suppression -->
+            </td>
+        </tr>
+    </tbody>
+</table>
