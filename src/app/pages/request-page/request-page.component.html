@@ -23,86 +23,7 @@
             <div class="row">
                 <div class="col-sm-1 col-md-1 col-lg-1">
                 </div>
-                <div class="col-sm-7 col-md-7 col-lg-7">
-                    <div class="yellow-container">
-                        <button class="image-button right">
-                            <img src="/assets/picture/contact.svg" alt="Button Image">
-                        </button>
-                        <h3> Contact </h3>
-                        <button class="image-button left" (click)="showContactForm()">
-                            <img src="/assets/picture/next.svg" alt="next">
-                        </button>
-                    </div>
-                    <div *ngIf="showFormContact">
-                        <form class="form-information" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                            <div>
-                                <label for="firstName">Prénom</label>
-                                <input type="text" id="firstName" formControlName="firstName" />
-                                <div
-                                    *ngIf="contactForm.controls['firstName'].invalid && contactForm.controls['firstName'].touched">
-                                    Prénom requis.
-                                </div>
-                            </div>
 
-                            <div>
-                                <label for="lastName">Nom</label>
-                                <input type="text" id="lastName" formControlName="lastName" />
-                                <div
-                                    *ngIf="contactForm.controls['lastName'].invalid && contactForm.controls['lastName'].touched">
-                                    Nom requis.
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="email">Email</label>
-                                <input type="email" id="email" formControlName="email" />
-                                <div *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched"
-                                    class=validation-message>
-                                    Email requis et doit être au format valide.
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="address">Adresse</label>
-                                <input type="text" id="address" formControlName="address" />
-                                <div *ngIf="contactForm.controls['address'].invalid && contactForm.controls['address'].touched"
-                                    class=validation-message>
-                                    Adresse requise.
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="city">Ville</label>
-                                <input type="text" id="city" formControlName="city" />
-                                <div *ngIf="contactForm.controls['city'].invalid && contactForm.controls['city'].touched"
-                                    class=validation-message>
-                                    Ville requise.
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="postalCode">Code postal</label>
-                                <input type="text" id="postalCode" formControlName="postalCode" />
-                                <div *ngIf="contactForm.controls['postalCode'].invalid && contactForm.controls['postalCode'].touched"
-                                    class=validation-message>
-                                    Code postal requis.
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="country">Pays</label>
-                                <input type="text" id="country" formControlName="country" />
-                                <div *ngIf="contactForm.controls['country'].invalid && contactForm.controls['country'].touched"
-                                    class=validation-message>
-                                    Pays requis.
-                                </div>
-                            </div>
-
-                        </form>
-
-
-                    </div>
-                </div>
                 <div class=" col-sm-4 col-md-4 col-lg-4">
                 </div>
             </div>
@@ -168,14 +89,7 @@
 
                     <div *ngIf="showFormItem">
                         <form class="form-information" [formGroup]="itemForm" (ngSubmit)="onSubmit()">
-                            <div>
-                                <label for="description">Description</label>
-                                <textarea id="description" formControlName="description"></textarea>
-                                <div *ngIf="itemForm.controls['description'].invalid && itemForm.controls['description'].touched"
-                                    class=validation-message>
-                                    Description requise.
-                                </div>
-                            </div>
+
                             <div>
                                 <label for="productCode">Code du produit</label>
                                 <input type="text" id="productCode" formControlName="productCode" />
@@ -186,11 +100,11 @@
                             </div>
 
                             <div>
-                                <label for="file">Fichier</label>
-                                <input type="file" id="file" formControlName="file" />
-                                <div *ngIf="itemForm.controls['file'].invalid && itemForm.controls['file'].touched"
+                                <label for="description">Quantité</label>
+                                <textarea id="description" formControlName="description"></textarea>
+                                <div *ngIf="itemForm.controls['description'].invalid && itemForm.controls['description'].touched"
                                     class=validation-message>
-                                    Veuillez sélectionner un fichier.
+                                    Description requise.
                                 </div>
                             </div>
 
